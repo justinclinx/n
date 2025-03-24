@@ -3,6 +3,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 import time
 from datetime import datetime
+import os
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -25,7 +26,7 @@ logger.addHandler(file_handler)
 logger.addHandler(console_handler)
 
 # Bot token
-TOKEN = "7728659815:AAElBnr1vOt3zu-eRbRE39sAM-2wWcLyxbM"
+TOKEN = os.getenv("TOKEN")
 
 # Verification URL
 VERIFICATION_URL = "https://pocketoptions.cc"
